@@ -1,0 +1,16 @@
+GET http://localhost:5000/todos 
+
+###
+####
+POST http://localhost:5000/todo/new 
+content-type: application/json
+
+{
+    "text" : "Dish Wash2"
+}
+###
+
+DELETE http://localhost:5000/todo/delete/64bcff11bf88f03f2a890cb9
+
+###
+PUT http://localhost:5000/todo/complete/64da2c06679a89dee4e84b52
