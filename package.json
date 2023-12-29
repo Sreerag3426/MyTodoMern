@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:server": "node server.js",
+    "start": "concurrently \"npm run start:client\" \"npm run start:api\"",
     "start:client": "cd client && npm start",
-    "start:both": "echo Starting server && npm run start:server && echo Starting client && npm run start:client",
-    "start:both": "concurrently \"npm run start:server\" \"npm run start:client\""
+    "start:api": "cd api && npm start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^8.2.0"
+    "concurrently": "^8.2.0",
+    "dotenv": "^16.3.1"
   }
 }

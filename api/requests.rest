@@ -6,11 +6,11 @@ POST http://localhost:5000/todo/new
 content-type: application/json
 
 {
-    "text" : "Dish Wash2"
+    "text" : "Dish Kazhikal"
 }
 ###
 
-DELETE http://localhost:5000/todo/delete/64bcff11bf88f03f2a890cb9
+DELETE http://localhost:5000/todo/delete/657d4bd08c0c87c88a7ffce5
 
 ###
-PUT http://localhost:5000/todo/complete/64da2c06679a89dee4e84b52
+PUT http://localhost:5000/todo/complete/657d4b678c0c87c88a7ffce3

@@ -1,15 +1,21 @@
+const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
- 
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+
+
 async function startServer() {
 try{
-    await mongoose.connect("mongodb+srv://<username>:<password>@cluster0.o0jf83i.mongodb.net/?retryWrites=true&w=majority",{
+    await mongoose.connect(process.env.dbUri,{
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        
 });
 app.listen(5000, () => {
     console.log('Server is running on port 5000');
@@ -19,15 +25,6 @@ app.listen(5000, () => {
 }
 }
 startServer();
-
-// try {
-//     mongoose.connect("mongodb+srv://sreeragv9539:QKj1r51HexWfzyBs@cluster0.o0jf83i.mongodb.net/?retryWrites=true&w=majority");
-//     console.log("DB connected");
-// } catch(err){
-//     console.log("DB connection Failed");
-// }
-
-   
 
 const Todo = require('./models/Todo');
 app.get('/todos', async(req,res)=>{
