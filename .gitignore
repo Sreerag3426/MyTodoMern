@@ -1,7 +1,14 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignore node_modules in the api folder
+# Ignore node_modules in the api folder
+api/node_modules/
 
-# dependencies
-/node_modules
+# Ignore node_modules in the frontend folder
+frontend/node_modules/
+
+# Ignore all node_modules folders at any level in the project
+**/node_modules/
+
 /.pnp
 .pnp.js
 
@@ -30,3 +37,4 @@ dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+node_modules
