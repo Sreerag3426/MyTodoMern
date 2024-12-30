@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,400;0,600;0,700;0,800;1,400&display=swap');
+body {
+  margin: 0;
+  font-family: 'Jost', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.app{
+  text-align: center;
+}
+.todo {
+    position: relative;
+    margin: auto;
+    width: 50%;
+    /* margin: 0; */
+}
+.todo p{
+  text-align: center;
+  background: black;
+  padding: 10px;
+  color: white;
+  border-radius: 15px;
+}
+.checkbox{
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background: grey;
+  border-radius: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-decoration: line-through;
+  cursor: pointer;
+}
+.delete{
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 10px;
+  top: 50%;
+  display: flex;
+  transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.iscompleted .checkbox{
+  background: linear-gradient(45deg, #00ff15, #089600);
+  text-decoration: none;
+}
+.delete{
+  cursor: pointer;
+}
+.addPopup{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  font-size: 28px;
+  font-weight: 900;
+  color: white;
+  background: linear-gradient(45deg, #0c100d, #7ba579);
+  cursor: pointer;
+
+}
+.popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: grey;
+  padding: 30px 50px;
+}
+.popup h3{
+  color: white;
+}
+.closePopup{
+  background-color: white;
+  /* width: 10px; */
+  padding: 10px 12px;
+  border-radius: 60px;
+  width: 20px;
+  /* display: flex; */
+  cursor: pointer;
+  margin: auto;
+}
+.btn1{
+  color: white;
+  padding: 8px 10px;
+  background: green;
+  margin: 20px;
+  border: none;
+  font-weight: 800;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.add-input{
+  
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
